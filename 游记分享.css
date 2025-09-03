@@ -1,0 +1,150 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/游记分享背景.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #314733;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    padding: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 帖子列表样式 */
+.post-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-list a {
+    color:white;
+}
+
+.post-list a:hover {
+    color:#314733;
+}
+
+.post-list h2 {
+    margin-bottom: 20px;
+}
+
+.post {
+    border: solid 1px #ccc;
+    padding: 10px;
+    color: white;
+    background-color: rgba(49, 71, 51, .6);
+}
+
+.post h3 {
+    margin: 0;
+    color: white;
+}
+
+.post .post-meta {
+    margin-top: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+/* 帖子详情样式 */
+.post-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-detail h2 {
+    margin-bottom: 20px;
+}
+
+.comment-list {
+    margin-top: 20px;
+    color: white;
+    background-color: rgba(49, 71, 51, .6);
+}
+
+.comment-list h4 {
+    margin-bottom: 10px;
+}
+
+.comment {
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-bottom: 10px
+}
+
+.comment .comment-meta {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form h4 {
+    margin-bottom: 10px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: solid 1px #ccc;
+}
+
+.comment-form textarea {
+    height: 80px;
+}
+
+.comment-form button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.comment-form button[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* 响应式设计 */
+/* @media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        padding: 10px 0;
+    }
+} */

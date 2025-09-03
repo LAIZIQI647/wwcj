@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="登录注册.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="from-box">
+            <!--注册-->
+            <div class="register-box hidden">
+                <h1>register</h1>
+                <input type="text" placeholder="用户名" id="register-username" name="username" required />
+                <input type="phone" placeholder="手机号" id="register-phone" name="phone" required />
+                <input type="password" placeholder="密码" id="register-password" name="password" minlength="8" required />
+                <input type="password" placeholder="确认密码" id="register-confirm-password" name="confirm_password"
+                    minlength="8" required />
+                <button type="button" id="register-submit">注册</button>
+            </div>
+            <!--登录-->
+            <div class="login-box">
+                <h1>login</h1>
+                <input type="text" placeholder="用户名" id="login-username" name="username" required />
+                <input type="password" placeholder="密码" id="login-password" name="password" minlength="8" required />
+                <button type="button" id="login-submit">登录</button>
+
+            </div>
+        </div>
+        <div class="con-box left">
+            <h2>欢迎来到<span>万物沉浸</span></h2>
+            <p>快来加入<span>我们</span>吧</p>
+            <!--插入图片-->
+            <img src="images/登录注册头像1.png" alt="">
+            <p>已有账号</p>
+            <button id="login">去登录</button>
+        </div>
+        <div class="con-box right">
+            <h2>欢迎注册<span>万物沉浸</span></h2>
+            <p>快来开启<span>你的旅行</span>吧</p>
+            <!--插入图片-->
+            <img src="images/登录注册头像2.jpg" alt="">
+            <p>没有账号？</p>
+            <button id="register">去注册</button>
+        </div>
+    </div>
+
+    <script>
+        //要操作的元素
+        let login = document.getElementById("login");
+        let register = document.getElementById("register");
+        let from_box = document.getElementsByClassName("from-box")[0];
+        let register_box = document.getElementsByClassName("register-box")[0];
+        let login_box = document.getElementsByClassName("login-box")[0];
+        //点击去注册按钮
+        register.addEventListener('click', () => {
+            from_box.style.transform = 'translateX(80%)';
+            login_box.classList.add('hidden');
+            register_box.classList.remove('hidden');
+        })
+        //点击去登录按钮
+        login.addEventListener('click', () => {
+            from_box.style.transform = 'translateX(0%)';
+            register_box.classList.add('hidden');
+            login_box.classList.remove('hidden');
+        })
+        // 注册功能
+        $('#register-submit').click(function () {
+            // 获取输入信息
+            var username = $('#register-username').val();
+            var password = $('#register-password').val();
+            var confirm_password = $('#register-confirm-password').val();
+            var phone = $('#register-phone').val();
+            // 简单判断信息是否为空
+            if (username && password && phone && confirm_password) {
+                // 保存用户信息到本地存储
+                localStorage.setItem(username, password, confirm_password, phone);
+                // 弹窗提示注册成功
+                alert("您已注册成功，快去登录吧");
+                // 切换到登录界面
+                $('#login-form').show();
+                $('#register-form').hide();
+            } else {
+                alert('信息不能为空');
+            }
+        })
+        // 登录功能
+        $('#login-submit').click(function () {
+            // 获取输入信息
+            var username = $('#login-username').val();
+            var password = $('#login-password').val();
+
+            // 检查用户名和密码
+            if (localStorage.getItem(username) === password) {
+                // 登录成功，跳转到指定页面
+                window.location.href = '首页.html';
+            } else {
+                alert('用户名或密码错误');
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,717 @@
+body {
+    background: linear-gradient(200deg, #f3e7e9, #e3eeff);
+}
+
+#my-button {
+    float: right;
+    top: 20px;
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+#my-button:hover {
+    background-color: #314733;
+    color: #fff;
+}
+
+/* 第一个门票 */
+.box_picture1 {
+    width: 380px;
+    height: 230px;
+    margin: 5px 0px 10px 100px;
+    background-image: url(精选景点/曼谷-芭提雅.jpg);
+    background-size: 380px 230px;
+    float: left;
+}
+
+.box_picture1_text {
+    width: 110px;
+    height: 20px;
+    background: #59b200;
+    float: left;
+    color: white;
+}
+
+.box_picture1_right {
+    float: left;
+    width: 516px;
+    height: 226px;
+    border: 2px solid #eeeeee;
+    margin: 5px 0px 10px 0px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 51px;
+    height: 52px;
+    float: right;
+    /* background-color: #a95b5b; */
+    /* background-image: url("../image/sanjiao.png"); */
+}
+
+.triangle .sanjiao {
+    width: 0;
+    height: 0;
+    display: block;
+    float: right;
+    border-style: solid;
+    border-width: 40px;
+    border-color: #fff4d9 #fff4d9 transparent transparent;
+}
+
+.triangle .zhekou {
+    width: 190px;
+    height: 80px;
+    color: #ff7c68;
+    display: block;
+    transform: rotate(46deg);
+    margin: 10px 0px 0px 12px;
+}
+
+.boxs {
+    width: 516px;
+    height: 150px;
+    /* background: #eeeeee; */
+    margin: 50px 0px 0px 0px;
+}
+
+.box_left {
+    clear: left;
+    width: 260px;
+    height: 140px;
+    /* background: #0000ee; */
+    float: left;
+}
+
+.box_right {
+    width: 180px;
+    height: 140px;
+    /* background: #00f0f0; */
+    float: left;
+}
+
+.box_picture1_right_left {
+    width: 220px;
+    height: 60px;
+    clear: both;
+    float: left;
+    margin: 0px 0px 0px 20px;
+    /*background: red;*/
+}
+
+.box_picture1_right_left_bottom {
+    width: 250px;
+    height: 80px;
+    clear: left;
+    /*background: #00f0f0;*/
+}
+
+.buttons {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    float: left;
+    color: #458b00;
+}
+
+.bottons_one {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #ff6600;
+    color: white;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    background: #ff6600;
+}
+
+/* 第二个门票 */
+.box_picture2 {
+    width: 380px;
+    height: 230px;
+    margin: 5px 0px 10px 100px;
+    background-image: url(精选景点/美国自由女神像.jpg);
+    background-size: 380px 230px;
+    float: left;
+    clear: left;
+    /* 使用 CSS 的 clear 属性来强制换行。clear 属性用于定义一个元素在哪个方向上不能有浮动元素。 */
+}
+
+.box_picture2_text {
+    width: 80px;
+    height: 20px;
+    background: #59b200;
+    float: left;
+    color: white;
+}
+
+.box_picture2_right {
+    float: left;
+    width: 516px;
+    height: 226px;
+    border: 2px solid #eeeeee;
+    margin: 5px 0px 10px 0px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 51px;
+    height: 52px;
+    float: right;
+    /* background-color: #a95b5b; */
+    /* background-image: url("../image/sanjiao.png"); */
+}
+
+.triangle1 .sanjiao {
+    width: 0;
+    height: 0;
+    display: block;
+    float: right;
+    border-style: solid;
+    border-width: 40px;
+    border-color: #fff4d9 #fff4d9 transparent transparent;
+}
+
+.triangle1 .zhekou {
+    width: 190px;
+    height: 80px;
+    color: #ff7c68;
+    display: block;
+    transform: rotate(46deg);
+    margin: 10px 0px 0px 12px;
+}
+
+.boxs {
+    width: 516px;
+    height: 150px;
+    /* background: #eeeeee; */
+    margin: 50px 0px 0px 0px;
+}
+
+.box_left {
+    clear: left;
+    width: 260px;
+    height: 140px;
+    /* background: #0000ee; */
+    float: left;
+}
+
+.box_right {
+    width: 180px;
+    height: 140px;
+    /* background: #00f0f0; */
+    float: left;
+}
+
+.box_picture2_right_left {
+    width: 220px;
+    height: 60px;
+    clear: both;
+    float: left;
+    margin: 0px 0px 0px 20px;
+    /*background: red;*/
+}
+
+.box_picture2_right_left_bottom {
+    width: 250px;
+    height: 80px;
+    clear: left;
+    /*background: #00f0f0;*/
+}
+
+.buttons {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    float: left;
+    color: #458b00;
+}
+
+.bottons_one {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #ff6600;
+    color: white;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    background: #ff6600;
+}
+
+/* 第三个门票 */
+.box_picture3 {
+    width: 380px;
+    height: 230px;
+    margin: 5px 0px 10px 100px;
+    background-image: url(精选景点/日本富士山.jpg);
+    background-size: 380px 230px;
+    float: left;
+    clear: left;
+}
+
+.box_picture3_text {
+    width: 80px;
+    height: 20px;
+    background: #59b200;
+    float: left;
+    color: white;
+}
+
+.box_picture3_right {
+    float: left;
+    width: 516px;
+    height: 226px;
+    border: 2px solid #eeeeee;
+    margin: 5px 0px 10px 0px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 51px;
+    height: 52px;
+    float: right;
+    /* background-color: #a95b5b; */
+    /* background-image: url("../image/sanjiao.png"); */
+}
+
+.triangle1 .sanjiao {
+    width: 0;
+    height: 0;
+    display: block;
+    float: right;
+    border-style: solid;
+    border-width: 40px;
+    border-color: #fff4d9 #fff4d9 transparent transparent;
+}
+
+.triangle1 .zhekou {
+    width: 190px;
+    height: 80px;
+    color: #ff7c68;
+    display: block;
+    transform: rotate(46deg);
+    margin: 10px 0px 0px 12px;
+}
+
+.boxs {
+    width: 516px;
+    height: 150px;
+    /* background: #eeeeee; */
+    margin: 50px 0px 0px 0px;
+}
+
+.box_left {
+    clear: left;
+    width: 260px;
+    height: 140px;
+    /* background: #0000ee; */
+    float: left;
+}
+
+.box_right {
+    width: 180px;
+    height: 140px;
+    /* background: #00f0f0; */
+    float: left;
+}
+
+.box_picture3_right_left {
+    width: 220px;
+    height: 60px;
+    clear: both;
+    float: left;
+    margin: 0px 0px 0px 20px;
+    /*background: red;*/
+}
+
+.box_picture3_right_left_bottom {
+    width: 250px;
+    height: 80px;
+    clear: left;
+    /*background: #00f0f0;*/
+}
+
+.buttons {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    float: left;
+    color: #458b00;
+}
+
+.bottons_one {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #ff6600;
+    color: white;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    background: #ff6600;
+}
+
+/* 第四个门票 */
+.box_picture4 {
+    width: 380px;
+    height: 230px;
+    margin: 5px 0px 10px 100px;
+    background-image: url(精选景点/印度泰姬陵.jpg);
+    background-size: 380px 230px;
+    float: left;
+    clear: left;
+}
+
+.box_picture4_text {
+    width: 95px;
+    height: 20px;
+    background: #59b200;
+    float: left;
+    color: white;
+}
+
+.box_picture4_right {
+    float: left;
+    width: 516px;
+    height: 226px;
+    border: 2px solid #eeeeee;
+    margin: 5px 0px 10px 0px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 51px;
+    height: 52px;
+    float: right;
+    /* background-color: #a95b5b; */
+    /* background-image: url("../image/sanjiao.png"); */
+}
+
+.triangle1 .sanjiao {
+    width: 0;
+    height: 0;
+    display: block;
+    float: right;
+    border-style: solid;
+    border-width: 40px;
+    border-color: #fff4d9 #fff4d9 transparent transparent;
+}
+
+.triangle1 .zhekou {
+    width: 190px;
+    height: 80px;
+    color: #ff7c68;
+    display: block;
+    transform: rotate(46deg);
+    margin: 10px 0px 0px 12px;
+}
+
+.boxs {
+    width: 516px;
+    height: 150px;
+    /* background: #eeeeee; */
+    margin: 50px 0px 0px 0px;
+}
+
+.box_left {
+    clear: left;
+    width: 260px;
+    height: 140px;
+    /* background: #0000ee; */
+    float: left;
+}
+
+.box_right {
+    width: 180px;
+    height: 140px;
+    /* background: #00f0f0; */
+    float: left;
+}
+
+.box_picture4_right_left {
+    width: 220px;
+    height: 60px;
+    clear: both;
+    float: left;
+    margin: 0px 0px 0px 20px;
+    /*background: red;*/
+}
+
+.box_picture4_right_left_bottom {
+    width: 250px;
+    height: 80px;
+    clear: left;
+    /*background: #00f0f0;*/
+}
+
+.buttons {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    float: left;
+    color: #458b00;
+}
+
+.bottons_one {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #ff6600;
+    color: white;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    background: #ff6600;
+}
+
+/* 第五个门票 */
+.box_picture5 {
+    width: 380px;
+    height: 230px;
+    margin: 5px 0px 10px 100px;
+    background-image: url(精选景点/峨眉山.jpg);
+    background-size: 380px 230px;
+    float: left;
+    clear: left;
+}
+
+.box_picture5_text {
+    width: 80px;
+    height: 20px;
+    background: #59b200;
+    float: left;
+    color: white;
+}
+
+.box_picture5_right {
+    float: left;
+    width: 516px;
+    height: 226px;
+    border: 2px solid #eeeeee;
+    margin: 5px 0px 10px 0px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 51px;
+    height: 52px;
+    float: right;
+    /* background-color: #a95b5b; */
+    /* background-image: url("../image/sanjiao.png"); */
+}
+
+.triangle1 .sanjiao {
+    width: 0;
+    height: 0;
+    display: block;
+    float: right;
+    border-style: solid;
+    border-width: 40px;
+    border-color: #fff4d9 #fff4d9 transparent transparent;
+}
+
+.triangle1 .zhekou {
+    width: 190px;
+    height: 80px;
+    color: #ff7c68;
+    display: block;
+    transform: rotate(46deg);
+    margin: 10px 0px 0px 12px;
+}
+
+.boxs {
+    width: 516px;
+    height: 150px;
+    /* background: #eeeeee; */
+    margin: 50px 0px 0px 0px;
+}
+
+.box_left {
+    clear: left;
+    width: 260px;
+    height: 140px;
+    /* background: #0000ee; */
+    float: left;
+}
+
+.box_right {
+    width: 180px;
+    height: 140px;
+    /* background: #00f0f0; */
+    float: left;
+}
+
+.box_picture5_right_left {
+    width: 220px;
+    height: 60px;
+    clear: both;
+    float: left;
+    margin: 0px 0px 0px 20px;
+    /*background: red;*/
+}
+
+.box_picture5_right_left_bottom {
+    width: 250px;
+    height: 80px;
+    clear: left;
+    /*background: #00f0f0;*/
+}
+
+.buttons {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    float: left;
+    color: #458b00;
+}
+
+.bottons_one {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #ff6600;
+    color: white;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    background: #ff6600;
+}
+
+/* 第六个门票 */
+.box_picture6 {
+    width: 380px;
+    height: 230px;
+    margin: 5px 0px 10px 100px;
+    background-image: url(精选景点/新西兰北岛-霍比特人村.jpg);
+    background-size: 380px 230px;
+    float: left;
+    clear: left;
+}
+
+.box_picture6_text {
+    width: 60px;
+    height: 20px;
+    background: #59b200;
+    float: left;
+    color: white;
+}
+
+.box_picture6_right {
+    float: left;
+    width: 516px;
+    height: 226px;
+    border: 2px solid #eeeeee;
+    margin: 5px 0px 10px 0px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 51px;
+    height: 52px;
+    float: right;
+    /* background-color: #a95b5b; */
+    /* background-image: url("../image/sanjiao.png"); */
+}
+
+.triangle1 .sanjiao {
+    width: 0;
+    height: 0;
+    display: block;
+    float: right;
+    border-style: solid;
+    border-width: 40px;
+    border-color: #fff4d9 #fff4d9 transparent transparent;
+}
+
+.triangle1 .zhekou {
+    width: 190px;
+    height: 80px;
+    color: #ff7c68;
+    display: block;
+    transform: rotate(46deg);
+    margin: 10px 0px 0px 12px;
+}
+
+.boxs {
+    width: 516px;
+    height: 150px;
+    /* background: #eeeeee; */
+    margin: 50px 0px 0px 0px;
+}
+
+.box_left {
+    clear: left;
+    width: 260px;
+    height: 140px;
+    /* background: #0000ee; */
+    float: left;
+}
+
+.box_right {
+    width: 180px;
+    height: 140px;
+    /* background: #00f0f0; */
+    float: left;
+}
+
+.box_picture6_right_left {
+    width: 220px;
+    height: 60px;
+    clear: both;
+    float: left;
+    margin: 0px 0px 0px 20px;
+    /*background: red;*/
+}
+
+.box_picture6_right_left_bottom {
+    width: 250px;
+    height: 80px;
+    clear: left;
+    /*background: #00f0f0;*/
+}
+
+.buttons {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    float: left;
+    color: #458b00;
+}
+
+.bottons_one {
+    width: 115px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #ff6600;
+    color: white;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    background: #ff6600;
+}
+
+/* .z {
+    float:left;
+    width: 490px;
+    height: 230px;
+    background-color: #d72828;
+    margin: 5px 0 0 10px;
+
+}
+.z img {
+    width: 230px;
+    height: 230px;
+} */

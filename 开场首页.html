@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万物沉浸</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            overflow-x: hidden;
+        }
+
+        .background {
+            background-image: url(images/开场首页.jpg);
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 200vh;
+            -webkit-background-clip: text;
+            font: 900 20rem '';
+            line-height: 130vh;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        span {
+            -webkit-text-fill-color: transparent;
+        }
+
+        .background::before {
+            content: '';
+            background-size: cover;
+            background-image: inherit;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -99;
+        }
+
+        button {
+            display: block;
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0 auto;
+            margin-top: -200px;
+            padding: 10px;
+            border: 3px solid black;
+            border-width: 100%;
+            border-radius: 20px;
+            background-color: #314733;
+            color: #fff8e9;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: #8b0000;
+            transition: background-color 0.5s ease;
+        }
+
+        h2 {
+            position: absolute;
+            letter-spacing: 2px;
+            top: 120vh;
+            width: 60%;
+            color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+
+        strong {
+            color: red;
+            font-size: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <span>万物沉浸</span>
+        <button onclick="location.href='首页.html';">点击加入</button>
+    </div>
+
+    <h2>
+        听说这个网站是由赖梓淇制作的旅游网站！简直是华丽到不行，幽默到飞起！
+        你在这里能找到各种有趣的东西，就像在森林里发现了一颗闪闪发光的宝石！没错，你绝对不能错过这个网站！
+        <strong>泰裤辣！</strong>
+    </h2>
+
+    <script>
+        const background = document.querySelector(".background")
+
+        document.addEventListener('scroll', () => {
+            const scrollY = window.scrollY
+
+            if (scrollY !== 0) {
+                background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
+            } else {
+                background.style.backgroundPosition = ''
+            }
+        })
+    </script>
+</body>
+
+</html>

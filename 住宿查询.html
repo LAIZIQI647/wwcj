@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>万物沉浸-住宿查询</title>
+  <link rel="shortcut icon" href="images/logo.png">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  body {
+    background-image: url(images/住宿查全背景.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+    color: #333;
+  }
+
+  form {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 24px;
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="submit"] {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #submit {
+    background-color: #314733;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #accommodations-list {
+    margin-top: 30px;
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .accommodation {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 500px;
+    display: inline-block;
+  }
+
+  .accommodation h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .accommodation p {
+    font-size: 18px;
+    color: #666;
+  }
+
+  #my-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #314733;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #my-button:hover {
+    background-color: #fff;
+    color: black;
+  }
+</style>
+
+<body>
+  <h1>住宿查询</h1>
+  <a id="my-button" href="首页.html">返回首页</a>
+  <form>
+    <label for="location">地点：</label>
+    <input type="text" id="location" name="location">
+    <label for="date">日期：</label>
+    <input type="date" id="date" name="date">
+    <a id="submit">查询</a>
+  </form>
+
+  <script>
+    const form = document.querySelector('form');
+    const accommodationsList = document.querySelector('#accommodations-list');
+
+    form.addEventListener('submit', function (event) {
+      // 停止表单默认提交行为
+      event.preventDefault();
+
+      // 获取地点和日期输入框的值
+      const location = document.querySelector('#location').value;
+      const date = document.querySelector('#date').value;
+
+      // 发送GET请求获取住宿信息
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://api.example.com/accommodations?location=' + location + '&date=' + date);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // 清空住宿列表
+          accommodationsList.innerHTML = '';
+
+          // 解析响应数据并添加到住宿列表
+          const accommodations = JSON.parse(xhr.responseText);
+          accommodations.forEach(function (accommodation) {
+            const li = document.createElement('li');
+            li.className = 'accommodation';
+            li.innerHTML = `
+          <h2>${accommodation.name}</h2>
+          <p>${accommodation.address}</p>
+          <p>${accommodation.price}元/晚</p>
+        `;
+            accommodationsList.appendChild(li);
+          });
+        } else {
+          console.error(xhr.statusText);
+        }
+      };
+      xhr.onerror = function () {
+        console.error(xhr.statusText);
+      };
+      xhr.send();
+    });
+    var myButton = document.getElementById("submit");
+    myButton.addEventListener("click", function () {
+      alert("暂未开放此功能，敬请期待");
+    });
+  </script>
+</body>
+
+</html>
